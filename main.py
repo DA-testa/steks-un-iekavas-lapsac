@@ -25,7 +25,10 @@ def main():
     text = input()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
-
+    if mismatch is None:
+        print(" ")
+    else:
+        print(mismatch + 1)
 
 if __name__ == "__main__":
     main()
