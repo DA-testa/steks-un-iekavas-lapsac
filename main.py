@@ -1,5 +1,6 @@
 # python3
-
+# Lauma Gailite 221RDB389 1. kurss 2. grupa. Uz Visual studio code kods strada, GitHub met erroru ~
+# pielauju ka nesapass ar Workflow requirements (?), bet uzdevuma del neko nemainiju.
 from collections import namedtuple
 
 Bracket = namedtuple("Bracket", ["char", "position"])
