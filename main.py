@@ -15,9 +15,9 @@ def find_mismatch(text):
         if next in "([{":
             opening_brackets_stack.append(Bracket(next,i+1))
             #pass
-        if next in ")]}":
+        elif next in ")]}":
             if not opening_brackets_stack:
-            return i+1
+                return i+1
         last = opening_brackets_stack.pop()
         if not are_matching(last.char, next):
             return i+1
@@ -27,12 +27,24 @@ def find_mismatch(text):
             # Process closing bracket, write your code here
             #pass
 
-
 def main():
-    text = input()
+    choice = input("Choose files or input - F or I : ")
+    
+    if choice == "F":
+        fails = input("Input / paste file path: ")
+        with open(fails, "r") as file:
+            text = file.read()
+    elif choice == "I":
+        text = input("Input brackets: ")
+    else:
+        print("Invalid! ")
+        return
+    
     mismatch = find_mismatch(text)
-    # Printing answer, write your code here
-    print(mismatch + 1)
-
+    if mismatch == "Success":
+        print("Success")
+    else:
+        print(mismatch)
+        
 if __name__ == "__main__":
     main()
