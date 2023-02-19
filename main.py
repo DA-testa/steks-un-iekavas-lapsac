@@ -38,7 +38,7 @@ def main():
     elif choice == "I":
         text = input("Input brackets: ")
     else:
-        print("Invalid! ")
+        print(" ")
         return
     
     mismatch = find_mismatch(text)
