@@ -29,7 +29,7 @@ def find_mismatch(text):
             #pass
 
 def main():
-    choice = input("Choose files or input - F or I : ")
+    choice = input()
     
     if choice == "F":
         fails = input("Input / paste file path: ")
